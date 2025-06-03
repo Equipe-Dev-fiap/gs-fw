@@ -48,5 +48,74 @@ function showSlides(n) {
 setInterval(() => {
     plusSlides(1); // Avança para o próximo slide
 }, 5000); // Intervalo de 5 segundos (5000 milissegundos)
+// Funcionalidade de troca de tema
+const body = document.body; // Obtém o elemento <body> do documento
+// Seleciona os botões de tema (tanto para desktop quanto para mobile, se existirem)
+const themeLightButtons = document.querySelectorAll('#theme-light');
+const themeDarkButtons = document.querySelectorAll('#theme-dark');
+const themeBlueButtons = document.querySelectorAll('#theme-blue');
+
+// Função para aplicar o tema selecionado
+function applyTheme(theme) {
+    // Remove todas as classes de tema existentes do corpo
+    body.classList.remove('theme-light', 'theme-dark', 'theme-blue');
+    body.classList.remove('bg-gray-50', 'text-gray-800', 'bg-gray-900', 'text-gray-100', 'bg-blue-100', 'text-blue-900');
+
+    // Aplica as novas classes de tema
+    if (theme === 'light') {
+        body.classList.add('theme-light', 'bg-gray-50', 'text-gray-800');
+        // Atualiza as cores dos ícones para o tema claro
+        themeLightButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-yellow-500', 'text-orange-400', 'text-yellow-600');
+            button.querySelector('i').classList.add('text-yellow-500');
+        });
+        themeDarkButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-gray-300', 'text-gray-500', 'text-gray-100');
+            button.querySelector('i').classList.add('text-gray-300');
+        });
+        themeBlueButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-blue-500', 'text-blue-700', 'text-blue-300');
+            button.querySelector('i').classList.add('text-blue-500');
+        });
+    } else if (theme === 'dark') {
+        body.classList.add('theme-dark', 'bg-gray-900', 'text-gray-100');
+        // Atualiza as cores dos ícones para o tema escuro
+        themeLightButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-yellow-500', 'text-orange-400', 'text-yellow-600');
+            button.querySelector('i').classList.add('text-orange-400'); // Amarelo ligeiramente mais escuro para contraste
+        });
+        themeDarkButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-gray-300', 'text-gray-500', 'text-gray-100');
+            button.querySelector('i').classList.add('text-gray-100'); // Lua mais brilhante
+        });
+        themeBlueButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-blue-500', 'text-blue-700', 'text-blue-300');
+            button.querySelector('i').classList.add('text-blue-300');
+        });
+    } else if (theme === 'blue') {
+        body.classList.add('theme-blue', 'bg-blue-100', 'text-blue-900');
+        // Atualiza as cores dos ícones para o tema azul
+        themeLightButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-yellow-500', 'text-orange-400', 'text-yellow-600');
+            button.querySelector('i').classList.add('text-yellow-600');
+        });
+        themeDarkButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-gray-300', 'text-gray-500', 'text-gray-100');
+            button.querySelector('i').classList.add('text-gray-500');
+        });
+        themeBlueButtons.forEach(button => {
+            button.querySelector('i').classList.remove('text-blue-500', 'text-blue-700', 'text-blue-300');
+            button.querySelector('i').classList.add('text-blue-700'); // Azul mais escuro para água
+        });
+    }
+}
+
+// Adiciona ouvintes de evento de clique para cada botão de tema
+themeLightButtons.forEach(button => button.addEventListener('click', () => applyTheme('light')));
+themeDarkButtons.forEach(button => button.addEventListener('click', () => applyTheme('dark')));
+themeBlueButtons.forEach(button => button.addEventListener('click', () => applyTheme('blue')));
+
+// Aplica o tema inicial (claro por padrão)
+applyTheme('light');
 
 
