@@ -202,4 +202,67 @@ body {
     max-height: 500px; /* Adjust as needed, should be larger than content */
     padding: 1rem; /* Apply padding when open */
 }
+/* Estilos específicos para o Tema Claro */
+body.theme-light .hamburger-menu span { background-color: #333; }
+body.theme-light .mobile-nav { background-color: #fff; }
+body.theme-light .accordion-item { border-color: #e2e8f0; }
+body.theme-light .accordion-header { background-color: #f7fafc; border-color: #e2e8f0; }
+body.theme-light .accordion-header:hover { background-color: #edf2f7; }
+
+/* Estilos específicos para o Tema Escuro */
+body.theme-dark {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+body.theme-dark .bg-white { background-color: #2d3748; }
+body.theme-dark .bg-blue-50 { background-color: #4a5568; }
+body.theme-dark .text-gray-800 { color: #e2e8f0; }
+body.theme-dark .text-gray-600 { color: #cbd5e0; }
+body.theme-dark .text-gray-700 { color: #cbd5e0; }
+body.theme-dark .text-gray-500 { color: #a0aec0; }
+body.theme-dark .text-blue-600 { color: #90cdf4; }
+body.theme-dark .mobile-nav { background-color: #2d3748; }
+body.theme-dark .hamburger-menu span { background-color: #e2e8f0; }
+body.theme-dark .quiz-option { border-color: #4a5568; background-color: #2d3748; }
+body.theme-dark .quiz-option:hover { background-color: #4a5568; }
+body.theme-dark .quiz-option label { color: #e2e8f0; }
+body.theme-dark .quiz-option.correct { background-color: #1a472a; border-color: #2f855a; }
+body.theme-dark .quiz-option.incorrect { background-color: #7b341e; border-color: #c53030; }
+body.theme-dark .form-radio { background-color: #4a5568; border-color: #a0aec0; }
+body.theme-dark input, body.theme-dark textarea { background-color: #2d3748; border-color: #4a5568; color: #e2e8f0; }
+body.theme-dark .placeholder-gray-700::placeholder { color: #a0aec0; }
+body.theme-dark #riverLevelBarContainer { border-color: #e2e8f0; background-color: #4a5568; }
+body.theme-dark .accordion-item { border-color: #4a5568; background-color: #2d3748; }
+body.theme-dark .accordion-header { background-color: #2d3748; border-color: #4a5568; color: #90cdf4; }
+body.theme-dark .accordion-header:hover { background-color: #4a5568; }
+body.theme-dark .accordion-content ul { color: #e2e8f0; }
+
+
+/* Estilos específicos para o Tema Azul */
+body.theme-blue {
+    background-color: #e0f2fe;
+    color: #1e3a8a;
+}
+body.theme-blue .bg-white { background-color: #bfdbfe; }
+body.theme-blue .bg-blue-50 { background-color: #93c5fd; }
+body.theme-blue .text-gray-800 { color: #1e3a8a; }
+body.theme-blue .text-gray-600 { color: #2563eb; }
+body.theme-blue .text-gray-700 { color: #2563eb; }
+body.theme-blue .text-gray-500 { color: #3b82f6; }
+body.theme-blue .text-blue-600 { color: #1c64f2; }
+body.theme-blue .mobile-nav { background-color: #bfdbfe; }
+body.theme-blue .hamburger-menu span { background-color: #1e3a8a; }
+body.theme-blue .quiz-option { border-color: #93c5fd; background-color: #bfdbfe; }
+body.theme-blue .quiz-option:hover { background-color: #93c5fd; }
+body.theme-blue .quiz-option label { color: #1e3a8a; }
+body.theme-blue .quiz-option.correct { background-color: #a7f3d0; border-color: #34d399; }
+body.theme-blue .quiz-option.incorrect { background-color: #fecaca; border-color: #f87171; }
+body.theme-blue .form-radio { background-color: #93c5fd; border-color: #3b82f6; }
+body.theme-blue input, body.theme-blue textarea { background-color: #bfdbfe; border-color: #93c5fd; color: #1e3a8a; }
+body.theme-blue .placeholder-gray-700::placeholder { color: #3b82f6; }
+body.theme-blue #riverLevelBarContainer { border-color: #1e3a8a; background-color: #93c5fd; }
+body.theme-blue .accordion-item { border-color: #93c5fd; background-color: #bfdbfe; }
+body.theme-blue .accordion-header { background-color: #bfdbfe; border-color: #93c5fd; color: #1c64f2; }
+body.theme-blue .accordion-header:hover { background-color: #93c5fd; }
+body.theme-blue .accordion-content ul { color: #1e3a8a; }
 
