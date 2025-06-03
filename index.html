@@ -255,5 +255,51 @@
             </div>
         </section>
 
+                <section id="contato" class="py-12 bg-blue-50 rounded-xl shadow-lg mb-12 p-6">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-8">Entre em Contato</h2>
+            <p class="text-gray-700 mb-6 text-center max-w-2xl mx-auto">Preencha o formulário abaixo para saber mais sobre nossa solução ou tirar suas dúvidas.</p>
+            <form id="contact-form" class="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nome Completo:</label>
+                    <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Seu nome" required>
+                    <p class="text-red-500 text-xs italic mt-1 hidden" id="name-error">Este campo é obrigatório.</p>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="seu.email@exemplo.com" required>
+                    <p class="text-red-500 text-xs italic mt-1 hidden" id="email-error">Por favor, insira um email válido.</p>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Sua mensagem aqui..." required></textarea>
+                    <p class="text-red-500 text-xs italic mt-1 hidden" id="message-error">Este campo é obrigatório.</p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:shadow-outline transition duration-300">Enviar Mensagem</button>
+                </div>
+                <div id="form-message" class="mt-4 text-center text-sm"></div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12 rounded-t-xl">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Solução de Monitoramento de Enchentes. Todos os direitos reservados.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./sript.js"></script> 
+</body>
+</html>
+
+
+        
+
 
 
