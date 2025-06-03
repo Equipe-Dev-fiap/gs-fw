@@ -117,5 +117,49 @@ themeBlueButtons.forEach(button => button.addEventListener('click', () => applyT
 
 // Aplica o tema inicial (claro por padrão)
 applyTheme('light');
+// Simulador de Nível do Rio (Rio Tietê)
+const riverLevelBarContainer = document.getElementById('riverLevelBarContainer'); // Contêiner da barra do nível do rio
+const riverLevelBar = document.getElementById('riverLevelBar'); // Barra de nível do rio
+const currentLevelSpan = document.getElementById('currentLevel'); // Span para exibir o nível atual
+const floodStatusDiv = document.getElementById('floodStatus'); // Div para exibir o status de enchente
+
+const DANGER_LEVEL = 75; // Porcentagem em que o perigo de enchente é declarado
+
+// Função para atualizar o nível do rio com dados aleatórios e verificar o perigo de enchente
+function updateRiverLevel() {
+    // Gera um nível aleatório entre 0 e 100
+    const randomLevel = Math.floor(Math.random() * 101);
+    currentLevelSpan.textContent = randomLevel; // Atualiza o texto do nível atual
+
+    // Define a altura da barra com base no nível aleatório
+    riverLevelBar.style.height = `${randomLevel}%`;
+
+    // Determina a cor da barra com base no nível de perigo
+    let barColor = '#4682B4'; // Azul aço para água normal
+    if (randomLevel >= DANGER_LEVEL) {
+        barColor = '#DC2626'; // Vermelho para perigo (Tailwind red-600)
+    }
+    riverLevelBar.style.backgroundColor = barColor; // Aplica a cor à barra
+
+    // Atualiza o status de enchente e suas classes de cor
+    if (randomLevel >= DANGER_LEVEL) {
+        floodStatusDiv.textContent = 'PERIGO DE ENCHENTE!';
+        floodStatusDiv.classList.remove('text-green-600', 'text-yellow-600');
+        floodStatusDiv.classList.add('text-red-600');
+    } else if (randomLevel >= DANGER_LEVEL - 20) { // Zona de aviso
+        floodStatusDiv.textContent = 'ATENÇÃO: Nível Elevado!';
+        floodStatusDiv.classList.remove('text-red-600', 'text-green-600');
+        floodStatusDiv.classList.add('text-yellow-600');
+    }
+    else {
+        floodStatusDiv.textContent = 'Nível Normal';
+        floodStatusDiv.classList.remove('text-red-600', 'text-yellow-600');
+        floodStatusDiv.classList.add('text-green-600');
+    }
+}
+
+// Atualiza o nível do rio a cada 6 segundos
+setInterval(updateRiverLevel, 6000);
+updateRiverLevel(); // Atualização inicial ao carregar a página
 
 
