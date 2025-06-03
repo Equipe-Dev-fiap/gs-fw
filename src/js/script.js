@@ -413,5 +413,28 @@ contactForm.addEventListener('submit', function(event) {
         formMessage.classList.add('text-red-500'); // Adiciona cor de erro
     }
 });
+// Lógica do Acordeão para a seção de Segurança
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const accordionContent = header.nextElementSibling;
+        const icon = header.querySelector('i');
+
+        // Fecha todos os outros acordeões
+        document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+            if (openContent !== accordionContent) {
+                openContent.classList.remove('open');
+                openContent.previousElementSibling.classList.remove('active');
+                openContent.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                openContent.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+            }
+        });
+
+        // Alterna o acordeão clicado
+        accordionContent.classList.toggle('open');
+        header.classList.toggle('active'); // Adiciona/remove classe 'active' para o header
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+    });
+});
 
 
