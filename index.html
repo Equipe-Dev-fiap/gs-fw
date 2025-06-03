@@ -173,5 +173,87 @@
             </div>
         </section>
 
+                <section id="seguranca" class="py-12 bg-white rounded-xl shadow-lg mb-12 p-6">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-8">Segurança em Enchentes: O Que Você Precisa Saber</h2>
+            <div class="space-y-4">
+                <div class="accordion-item bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h3 class="accordion-header text-2xl font-semibold text-blue-600 cursor-pointer flex justify-between items-center">
+                        Antes da Enchente
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="accordion-content mt-4 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Mantenha-se informado sobre os alertas de enchentes.</li>
+                            <li>Tenha um plano de evacuação familiar e uma rota de fuga.</li>
+                            <li>Prepare uma mochila de emergência com água, alimentos não perecíveis, medicamentos, documentos e um rádio a pilha.</li>
+                            <li>Desligue a energia elétrica e o gás, se for seguro fazê-lo.</li>
+                            <li>Proteja seus bens, elevando-os ou movendo-os para locais mais altos.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h3 class="accordion-header text-2xl font-semibold text-blue-600 cursor-pointer flex justify-between items-center">
+                        Durante a Enchente
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="accordion-content mt-4 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Não enfrente a água da enchente a pé ou de carro; a correnteza pode ser forte e a água pode esconder buracos ou objetos perigosos.</li>
+                            <li>Procure um local seguro e elevado.</li>
+                            <li>Se estiver em casa, suba para andares superiores.</li>
+                            <li>Mantenha-se longe de fios elétricos caídos.</li>
+                            <li>Siga as instruções das autoridades locais.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item bg-gray-50 p-4 rounded-lg shadow-sm">
+                    <h3 class="accordion-header text-2xl font-semibold text-blue-600 cursor-pointer flex justify-between items-center">
+                        Depois da Enchente
+                        <i class="fas fa-chevron-down transform transition-transform duration-300"></i>
+                    </h3>
+                    <div class="accordion-content mt-4 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Retorne para casa somente quando as autoridades informarem que é seguro.</li>
+                            <li>Cuidado com animais peçonhentos e estruturas danificadas.</li>
+                            <li>Não use aparelhos elétricos molhados.</li>
+                            <li>Limpe e desinfete sua casa para evitar doenças.</li>
+                            <li>Procure ajuda se precisar de apoio emocional ou material.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="simulador" class="py-12 bg-white rounded-xl shadow-lg mb-12 p-6 text-center">
+            <h2 class="text-3xl font-bold text-blue-600 mb-8">Simulador de Nível do Rio Tietê</h2>
+            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Observe o nível da água do Rio Tietê ser atualizado a cada 6 segundos. Fique atento aos avisos de perigo de enchente!</p>
+            <div id="riverLevelBarContainer">
+                <div id="riverLevelBar"></div>
+            </div>
+            <div class="mt-4">
+                <p class="text-lg font-semibold text-gray-700">Nível Atual: <span id="currentLevel">--</span>%</p>
+                <p id="floodStatus" class="text-xl font-bold mt-2"></p>
+            </div>
+        </section>
+
+        <section id="quiz" class="py-12 bg-white rounded-xl shadow-lg mb-12 p-6">
+            <h2 class="text-3xl font-bold text-blue-600 text-center mb-8">Quiz: Desafie Seus Conhecimentos!</h2>
+            <p class="text-gray-700 mb-6 text-center max-w-2xl mx-auto">Teste o que você aprendeu sobre enchentes e monitoramento de rios. Responda às perguntas e veja sua pontuação!</p>
+
+            <div id="quiz-container" class="max-w-3xl mx-auto">
+                <form id="quiz-form">
+                    </form>
+                <div class="flex justify-between mt-8">
+                    <button id="prev-question" class="px-6 py-3 bg-gray-400 text-white font-semibold rounded-lg shadow-md hover:bg-gray-500 transition duration-300" style="display: none;">Pergunta Anterior</button>
+                    <button id="next-question" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">Próxima Pergunta</button>
+                    <button id="submit-quiz" class="px-8 py-4 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300 transform hover:scale-105" style="display: none;">Enviar Respostas</button>
+                    <button id="restart-quiz" class="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition duration-300" style="display: none;">Reiniciar Quiz</button>
+                </div>
+                <div id="quiz-results" class="mt-6 text-xl font-bold text-center"></div>
+            </div>
+        </section>
+
 
 
