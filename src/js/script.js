@@ -367,5 +367,51 @@ const nameError = document.getElementById('name-error'); // Mensagem de erro par
 const emailError = document.getElementById('email-error'); // Mensagem de erro para o email
 const messageError = document.getElementById('message-error'); // Mensagem de erro para a mensagem
 const formMessage = document.getElementById('form-message'); // Mensagem de feedback do formulário
+// Adiciona um ouvinte de evento 'submit' ao formulário de contato
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Previne o envio padrão do formulário
+
+    let isValid = true; // Flag de validação
+
+    // Valida o campo Nome
+    if (nameInput.value.trim() === '') {
+        nameError.classList.remove('hidden'); // Mostra a mensagem de erro
+        nameInput.classList.add('border-red-500'); // Adiciona borda vermelha
+        isValid = false; // Define como inválido
+    } else {
+        nameError.classList.add('hidden'); // Esconde a mensagem de erro
+        nameInput.classList.remove('border-red-500'); // Remove a borda vermelha
+    }
+
+    // Valida o campo Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expressão regular para validação de email
+    if (!emailRegex.test(emailInput.value.trim())) {
+        emailError.classList.remove('hidden'); // Mostra a mensagem de erro
+        emailInput.classList.add('border-red-500'); // Adiciona borda vermelha
+        isValid = false; // Define como inválido
+    } else {
+        emailError.classList.add('hidden'); // Esconde a mensagem de erro
+        emailInput.classList.remove('border-red-500'); // Remove a borda vermelha
+    }
+
+    // Valida o campo Mensagem
+    if (messageInput.value.trim() === '') {
+        messageError.classList.remove('hidden'); // Mostra a mensagem de erro
+    } else {
+        messageError.classList.add('hidden'); // Esconde a mensagem de erro
+    }
+
+    if (isValid) {
+        // Se todos os campos forem válidos, simula o envio do formulário
+        formMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+        formMessage.classList.remove('text-red-500'); // Remove cor de erro
+        formMessage.classList.add('text-green-600'); // Adiciona cor de sucesso
+        contactForm.reset(); // Limpa o formulário
+    } else {
+        formMessage.textContent = 'Por favor, corrija os erros no formulário.';
+        formMessage.classList.remove('text-green-600'); // Remove cor de sucesso
+        formMessage.classList.add('text-red-500'); // Adiciona cor de erro
+    }
+});
 
 
